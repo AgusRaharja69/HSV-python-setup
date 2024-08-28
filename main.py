@@ -14,7 +14,7 @@ __version__ = "0.1.0"
 class HSVRangeFinder:
     def __init__(self):
         # Initialize camera index and flip options
-        self.camIndex = 0
+        self.camIndex = 1
         self.flip_horizontal = False
         self.flip_vertical = False
 
@@ -352,3 +352,8 @@ class HSVRangeFinder:
         self.window.mainloop()
         self.window.after_cancel(self.update_frame)
         self.cap.release()
+
+if __name__ == "__main__":
+    app = HSVRangeFinder()
+    app.update_frame()
+    app.window.mainloop()
